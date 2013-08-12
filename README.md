@@ -6,19 +6,13 @@ used to teach how to write Makefile.am and configure.ac
 setup steps:
 
 1. sh build.sh init
+1. configure --prefix=/your/install/path
+1. make
+1. make install
 
-2. configure --prefix=/your/install/path
-
-3. make
-
-4. make install
-
- 
 cleanup steps:
-
 1. make clean
-
-2. build.sh clean
+1. build.sh clean
 
 
 example:
