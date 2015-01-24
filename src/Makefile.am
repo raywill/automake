@@ -1,5 +1,5 @@
 #AM_LDFLAGS=-lrt -lpthread -ltimer
-AM_LDFLAGS=-lpthread -ltimer_1.0
+AM_LDFLAGS=-lpthread -ltimer
 #AM_CPPFLAGS=-I${TBLIB_ROOT}/include/tbsys
 #LDADD=${TBLIB_ROOT}/lib/libtbsys.a		
 AM_CPPFLAGS=-Itimer
