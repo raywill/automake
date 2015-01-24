@@ -1,18 +1,11 @@
 language: cpp
 before_install:
-#  - sed -i -e 's|AC_PREREQ(\[2.69\])|AC_PREREQ([2.68])|' configure.ac
-  - sudo apt-get update -qq
-install:
-#  - mkdir sdl_root
-#  - export SDL_PREFIX="$PWD/sdl_root"
-#  - export PATH="$SDL_PREFIX/bin:$PATH"
-#  - export PKG_CONFIG_PATH="$SDL_PREFIX/lib/pkgconfig:$PKG_CONFIG_PATH"
-#  - wget https://www.libsdl.org/release/SDL2-2.0.3.tar.gz -O - | tar -xz
-#  - (cd SDL2-2.0.3 && ./configure --prefix=$SDL_PREFIX && make -j5 && make install)
-#  - wget https://www.libsdl.org/projects/SDL_mixer/release/SDL2_mixer-2.0.0.tar.gz -O - | tar -xz
-#  - (cd SDL2_mixer-2.0.0 && ./configure --prefix=$SDL_PREFIX && make -j5 && make install)
-#script: ./build.sh init && ./configure && make -j5 distcheck
-script: ./build.sh init && ./configure && make -j5 
+- sudo apt-get update -qq
+install: 
+script: ./build.sh init && ./configure && make -j5
 compiler:
-  - gcc
-  - clang
+- gcc
+- clang
+notifications:
+  slack:
+    secure: QSIfGKSX3rpQlIwHXWsMKhC8f1aAVWm8WXGLJZcWMsF0F4qBd4gsoGBgmeKQkh+6/t7+kAGh4rgHTtoBF0RvFlkL3iKtPxT+n3WUMO+xH+zd3CpGr/l/DXbzBrY6psmpAL6hp8CyZfH4jkWC7Eimr9P0kckuJu4kCVWvmeLOWaU=
