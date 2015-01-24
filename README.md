@@ -1,5 +1,7 @@
 automake
 ========
+[![Build Status](https://travis-ci.org/gt3389b/automake.svg?branch=master)](https://travis-ci.org/gt3389b/automake)
+
 
 used to teach how to write Makefile.am and configure.ac
 
