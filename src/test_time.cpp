@@ -1,12 +1,13 @@
 #include "config.h"
-#include <tbsys.h>
+#include <timer.h>
 #include <stdio.h>
 #include <stdint.h>
 
 int main()
 {
 	int64_t now;
-	now = tbsys::CTimeUtil::getTime();
+	Timer timer = Timer();
+	now = timer.now();
 	printf("%s\n", PACKAGE_STRING);
 	printf("Bug report to %s\n", PACKAGE_BUGREPORT);
 	printf("now=%lld\n", now);
