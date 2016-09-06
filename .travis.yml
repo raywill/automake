@@ -1,0 +1,11 @@
+language: cpp
+before_install:
+- sudo apt-get update -qq
+install: 
+script: ./build.sh init && ./configure && make -j5
+compiler:
+- gcc
+- clang
+notifications:
+  slack:
+    secure: QSIfGKSX3rpQlIwHXWsMKhC8f1aAVWm8WXGLJZcWMsF0F4qBd4gsoGBgmeKQkh+6/t7+kAGh4rgHTtoBF0RvFlkL3iKtPxT+n3WUMO+xH+zd3CpGr/l/DXbzBrY6psmpAL6hp8CyZfH4jkWC7Eimr9P0kckuJu4kCVWvmeLOWaU=
